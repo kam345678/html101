@@ -2,14 +2,14 @@ body{
     font-family: "Libertinus Mono" , sans-serif;
     margin:0;
     padding:0;
-    background-color:rgb(red, green, blue);
+    background-color:#212121;
     color:yellow;
     text-align:center;
     font-size: 1.5em;
     } 
 header{
-    background-color:rgb(28, 4, 4);
-    color: rgb(246, 4, 4);
+    background-color:#000000;
+    color: #e64a19;
     padding: 5px 0;
     text-align: center;
     }
