@@ -1,3 +1,4 @@
+
 body{
     font-family: "Libertinus Mono" , sans-serif;
     margin:0;
@@ -13,3 +14,7 @@ header{
     padding: 5px 0;
     text-align: center;
     }
+img{
+    width: 450;
+    height: 300;
+}
