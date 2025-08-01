@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="manage_product.css">
+       <link rel="stylesheet" href="form-add-pd.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <script src="form-add-pd.js"></script>
+</head>
+<body>
+    <nav>
+        <i class='bx bxs-file'><h2>จัดการสินค้า</h2></i>
+        <div class="input"><input type="text" name="seacrch" id="seacrch" placeholder="กรอกชื่อหรือรหัสสินค้า"><i class='bx bx-search' ></i><i class='bx bx-qr-scan'></i></div>
+        <a onclick="openForm()"><i class='bx bx-plus-circle'></i>เพิ่มสินค้า</a>
+    </nav>
+
+    <main>
+        <div class="menu">
+            <ul>
+                <li class="menu-items all"><a href="#">ทั้งหมด</a></li>
+                <li class="menu-items"><a href="#">แฟร์ชั่น</a></li>
+                <li class="menu-items"><a href="#">สุขภาพและความงาม</a></li>
+                <li class="menu-items"><a href="#">อุปกรณ์อิเล็กทรอนิกส์</a></li>
+                <li class="menu-items"><a href="#">ของใช้ในบ้าน</a></li>
+                <li class="menu-items"><a href="#">กีฬาและกิจกรรมกลางแจ้ง</a></li>
+                <li class="menu-items other"><a href="#">อื่นๆ</a><i class='bx bxs-chevron-right'></i></li>
+            </ul>
+        </div>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>รูปสินค้า</th>
+                        <th>รหัสสินค้า</th>
+                        <th>ชื่อสินค้า</th>
+                        <th>ราคา</th>
+                        <th>จำนวน</th>
+                        <th>ขายไป</th>
+                        <th>คงเหลือ</th>
+                    </tr>
+                </thead>
+              
+                <tbody>
+                    <tr>
+                        <td><img src="../../img_form/shirt/form_admin.jpeg" alt="Product Image"></td>
+                        <td>TSH001</td>
+                        <td>เสื้อยืดแขนสั้นผู้ชาย คอกลม Oversized uniqlo</td>
+                        <td>490 บาท</td>
+                        <td>500</td>
+                        <td>250</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../img_form/backpack/2ae25be70905e0bc30cf0b9876e05837.jpeg" alt="Product Image"></td>
+                        <td>Backp001</td>
+                        <td>Nike กระเป๋าเป้รุ่น Elemental LBR </td>
+                        <td>528 บาท</td>
+                        <td>500</td>
+                        <td>100</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../img_form/umbrella/92db9cdceda810d3337532a3e7a77d31.jpeg_2200x2200q80.jpg_.webp"></td>
+                        <td>Umb001</td>
+                        <td>ร่มกันแดด กันฝน ร่มพับ3ตอน</td>
+                        <td>100 บาท</td>  
+                        <td>300</td>
+                        <td>100</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../img_form/hat/Watch-Beanie-Black-1-200x200.jpg" alt=""></td>
+                        <td>Hat001</td>
+                        <td>DexShell หมวกกันน้ำ (กันหนาว Level 4) Watch Beanie Black</td>
+                        <td>767 บาท</td>
+                        <td>600</td>
+                        <td>270</td>
+                        <td>330</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../img_form/glass/e8.jpg"></td>
+                        <td>Glass001</td>
+                        <td>ชุดกล่องของขวัญกระบอกน้ำสแตนเลส + แก้วน้ำ</td>
+                        <td>520 บาท</td>
+                        <td>300</td>
+                        <td>150</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../img_form/brooch/image.jpeg"></td>
+                        <td>Brooch001</td>
+                        <td>เข็มกลัดอก MJU สีทอง ขนาด 2 x 1 เซนติเมตร </td>
+                        <td>149 บาท</td>
+                        <td>800</td>
+                        <td>120</td>
+                        <td>680</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../img_form/notebook/in.jpg"></td>
+                        <td>Note001</td>
+                        <td>สมุดโน๊ต สมุดบันทึก ไดอารี่ สมุดเขียน A7 มีเส้น</td>
+                        <td>290 บาท</td>
+                        <td>300</td>
+                        <td>199</td>
+                        <td>101</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../img_form/pen/3e61e46ee00b08e5785afb6fc0d4e31d.webp"></td>
+                        <td>Pen001</td>
+                        <td>ปากกาเจล 0.5 มม. คละสี (BX)</td>
+                        <td>129 บาท</td>
+                        <td>500</td>
+                        <td>150</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+            </table>
+
+        </div>
+
+    </main>
+     
+   <div id="popupForm" class="background_form" >
+        <div  class="form-popup">
+            <form class="form-container">
+                <h2>แบบ Form เพิ่มสินค้า csmju shop</h2>
+
+                <label for="add_file">รูปโปรไฟล์สินค้า</label>
+                <input type="file" id="add_file" class="add_file"> 
+                
+                <label for="name_product">ป้อนชื่อสินค้า</label>
+                <input type="text" placeholder="ป้อนชื่อสินค้า" name="name_product" id="name_product">
+
+                <label for="id_product">ป้อนรหัสสินค้า</label>
+                <input type="text" placeholder="ป้อนรหัสสินค้า" name="id_product" id="id_product" required>  
+                
+                <label for="size">ขนาด</label>
+                <input type="text" placeholder="ป้อนไซต์สินค้า" name="size" id="size" required>
+                
+                <label for="quantity">จำนวน</label>
+                <input type="number" placeholder="กรอกจำนวนสินค้า" name="quantity" id="quantity" min="0" class="quantity_pd_order" required>
+
+                <label for="color">สี (click ที่กล่องสีดำเพื่อเลือกสี)</label>
+                <input type="color" id="color" class="color-picker" name="color" required>
+
+                <label for="price">ราคา</label>
+                <input type="number" placeholder="ป้อนราคา" name="price" id="price" required>
+             
+                <label for="description">รายละเอียดสินค้า</label>
+                <input type="text" placeholder="ป้อนรายละเอียดสินค้า" name="description" id="description">
+                
+                <label for="image">รูปภาพสินค้าเพิ่มเติม</label>
+                <input type="file" id="image" accept="image/*" multiple>
+
+                <div class="botton-form">
+                    <button type="submit">เพิ่ม</button>
+                    <button type="button" onclick="closeForm()" class="botton-cancel">ยกเลิก</button>
+                </div>
+        
+            </form>
+        </div>
+    </div>
+</body>
+</html
+

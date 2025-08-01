@@ -1,0 +1,124 @@
+.product{
+    /* background-color: rgb(255, 255, 255); */
+    width: 98%;
+    height: 50%;
+    margin-top: 10px;
+}
+.product_data{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(149, 148, 148, 0.853);
+
+}
+.product_data>img{
+    width: 32%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    object-fit: cover;
+}
+.data{
+    /* background-color: rgb(136, 95, 95); */
+    margin-left:10px;
+    padding: 0 10px;
+    width: 100%;    
+}
+.data h1{
+    display: flex;
+    justify-content: start;
+    font-size: 20px;
+    /* background-color: aqua; */
+    border-radius: 0px;
+    width: 100%;
+    height: 15%;
+    
+}
+.data h2{
+    display: flex;
+    justify-content: start;
+    font-size: 16px;
+    width: 100%;
+    height: 10%;
+    /* background-color: aquamarine; */
+    border-radius: 0%;
+
+}
+.data p{
+    margin-top:-14px;
+    font-size: 15px;
+}
+.footer_data{
+    margin-top:-16px;
+    /* background-color: bisque; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price_pd{
+    font-size: 20px;
+}
+.order_button{
+    width: 15%;
+    padding: 12px;
+    border: none;
+    background-color: #0077D3;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid rgb(168, 165, 165);
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+.order_button:hover{
+    background-color: #005fa3;
+    border: 2px solid white;
+}
+
+.more{
+    /* background-color: #f3f3f3; */
+    width: 100%;
+    height: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.more_pd{
+    width: 98%;
+    height: 100%;
+    overflow: auto;
+    display:flex;
+    justify-content:center;
+    align-items: end;
+    gap: 5px;
+    border-radius: 10px;
+   
+}
+.more_pd>img{
+    object-fit: cover;
+    height: 100%;
+    width: 250px;
+    border-radius: 10px;
+
+}
+
+.more_pd>a{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(240, 248, 255, 0.672);
+    position: fixed;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    color: rgb(7, 7, 7);
+}
+.more_pd>a:hover{
+    background-color: rgba(0, 0, 0, 0.238);
+}
+
+
+
+

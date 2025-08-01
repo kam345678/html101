@@ -1,0 +1,226 @@
+.background_form{
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.621);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-container{
+    /* background-color: rgb(245, 179, 179); */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow:auto;
+}
+
+.form-popup{
+    display: flex;
+    margin:50px auto;
+    width: 40%;
+    height: 90%;
+    border: 2px solid #0077D3;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 15px;
+   
+} 
+
+
+.box_img_pd{
+    display: flex;
+    height: 100px;
+    padding: 10px;
+    background-color: rgb(236, 236, 235);
+    border-radius: 10px;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.box_img_pd img{
+    width: 12%;
+    margin-left:0;
+    border-radius: 5px;
+}
+
+.data_img{
+    margin-top:0;
+    line-height: 1.6rem;
+}
+
+/* เลือกสี */
+
+ .color-option {
+    display: none;
+    }
+.color-label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+        border: 2px solid #ccc;
+        transition: 0.1s;
+        }
+.color-option:checked + .color-label {
+    border: 2px solid rgb(242, 86, 86);
+}
+.color-1 {
+    background-color: #e4c05c;
+}
+/* .color-2{
+    background-color: #224E69;
+}
+.color-3 {
+    background-color: #AEA69B;
+}
+.color-4 {
+    background-color: #739C8E;
+} */
+
+/* .color-yellow{
+    background-color: #CBBEB3;
+}
+.color-white {
+    background-color: #E5E5E5;
+} */
+
+/* ไซส์ */
+.sized-option{
+    display:none;
+}
+.size-label{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    margin: 5;
+    cursor:pointer;
+    border: 1px solid black;
+    transition: 0.1s;
+}
+.sized-option:checked + .size-label {
+    border: 2px solid rgb(247, 9, 9);
+}
+.size_div{
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.payment-channels{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    /* background-color: #835555; */
+}
+
+.payment-option{
+    width:-100%;
+}
+.pm-ch-label{
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+.shipping{
+    margin: 10px 0;
+}
+.delivery-label{
+    margin-left: 10px;
+
+}
+.form-container input {
+    font-size: 18px;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid hsl(0, 0%, 80%);
+    box-sizing: border-box;
+}
+
+/* From Uiverse.io by csemszepp */ 
+/* .custum-file-upload {
+    margin-top: 10px;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #e8e8e8;
+  background-color: #aaaaaa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px #e8e8e8;
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: #e8e8e8;
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: #e8e8e8;
+}
+
+.custum-file-upload input {
+  display: none;
+} */
+
+
+
+.botton-form{
+    display:flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.botton-form>.botton-cancel{
+    background-color:hsl(0, 100%, 50%);
+}
+.botton-form>.botton-cancel:hover{
+    background-color:white;
+    border: 1px solid red;
+    color: #141215;
+}
+.form-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    margin: 5px;
+    background-color: #068bf1;
+    color: white;
+    cursor: pointer;
+    width: 80px;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #0570bd;
+}
+

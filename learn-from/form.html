@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ร้านค้าขายของที่ระลึก
+    สาขาวิทยาการคอมพิวเตอร์
+
+    Admin สำหรับจัดเตรียมสินค้า
+
+    <form action="" method="post">
+        <h1>เสื้อ</h1>
+        <!-- ขนาด xs, s, m, l, xl, xxl, 3xl -->
+        <label for="productsize">ขนาด</label>
+        <select name="productsize" id="productsize">
+            <option value="xs">XS</option>
+            <option value="s">S</option>
+            <option value="m" selected="">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+            <option value="xxl">XXL</option>
+            <option value="3xl">3XL</option> 
+        </select>
+        <!-- สี ขาว, ดำ, น้ำเงิน, เทา -->
+         <label for="prdcolor">สี</label>
+        <input type="radio" name="prdcolor" value="white">ขาว
+        <input type="radio" name="prdcolor" value="black">ดำ
+        <input type="radio" name="prdcolor" value="blue">น้ำเงิน
+        <input type="radio" name="prdcolor" value="gray">เทา
+
+        <!-- ราคา -กรอกจำนวนเงิน -->
+        <label for="price">ราคา</label>
+        <input type="number"  name="price" id="price" min="0" max="100" step="10" value="0.00">กรอกจำนวนเงิน
+        
+        <!-- จำนวนสินค้า -->
+        <input type="number" name="quantity" id="quantity">จำนวน 
+
+        <!-- ชื่อรุ่น -->
+        <input type="text" name="modelname" id="modelname" placeholder="ชื่อรุ่น">
+
+        
+        รายละเอียดสินค้า
+        <textarea name="description" id="description" rows="10" placeholder="รายละเอียดสินค้า" maxlength="500"></textarea> 
+        
+        วันที่ขาย ตั้งแต่วันที่เริ่มต้น-สิ้นสุด
+        <input type="date" name="startdate" id="startdate">
+        <input type="date" name="enddate" id="enddate">
+
+        รูปภาพสินค้า
+        <input type="file" name="">
+    </form>
+    
+    ลูกค้าสามารถดลือกซื้อสินค้าได้ 
+
+    แก้วน้ำ
+
+    กระเป๋าผ้า
+    ร่ม
+    หมวก
+</body>
+</html>

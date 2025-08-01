@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/templat_pd.css">
+    <link rel="stylesheet" href="notebook.css">
+    <link rel="stylesheet" href="notebook-order.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="../pop-up_order.js"></script>
+</head>
+<body>
+    <div class="contain">
+        <div class="nav">
+            <img src="https://lh3.googleusercontent.com/proxy/ZkmpucSZto4hXBukfo5WiOpo_7PeTBH0aiUj05CzhSnefi-hHNQjWH_pHmtjH87JL2LI4l45lwU4rMmHITAeueNACYXp" alt="">
+            <div class="input_product">
+                <div class="icon-search"><i class='bx bx-search bx-sm'></i></div>
+                <input type="text" placeholder="search products"  >
+            </div>
+            <div class="nav-items-li">
+                <ul>
+                    <li class="contact" ><a href="#">ติดต่อร้านค้า</a></li>
+                    <li class="admin"><a href="../../admin/login.html">for Admin</a></li>
+                </ul>
+            </div>
+             
+        </div>
+        <div class="header">
+            <h2>Welcome to </h2>
+            <div class="shop">
+                <i class='bx bxl-shopify bx-lg bx-tada'></i>
+                <h1><b>csmju shop!</b></h1>  
+            </div>
+        </div>
+        <div class="main-contain">   
+            <div class="product">
+                <div class="product_data">
+                    <img src="../../img_form/notebook/in.jpg" alt="">
+                    <div class="data">
+                        <h1>สมุดโน๊ต สมุดบันทึก ไดอารี่ สมุดเขียน A7 มีเส้น ลายแมวน่ารัก ปกหนัง PU พกพาง่าย</h1>
+                        <p>สมุดโน๊ต สมุดบันทึก  ไดอารี่ สมุดเขียน ตัวสมุดปกวัสดุทำจากหนัง PU ขนาดกระทัดรัด พกพาสะดวก เนื้อกระดาษเรียบเนียน 
+                            เขียนลื่น ช่วยให้หมึกสีสดและคมชัด  เหมาะสำหรับเขียนหรือจดบันทึกต่าง ๆ มีที่ล๊อครหัสเพื่อสร้างความเป็นส่วนตัว 
+                            ในไดอารี่  ช่วยจดจำบันทึกรายละเอียดของเรา เล่นเดียว จบครบ เหมาะสำหรับทุกช่วงทุกวัย</p>
+                        <h2>รายระเอียดสินค้า</h2>
+                        <p><b>ประเภทสินค้า:</b> สมุดบันทึก<br>
+                            <b>แบรนด์:</b>no brand<br>
+                            <b>สี:</b> เขียวมิ้นต์,ชมพู<br>
+                            <b>ไซส์:</b> One size 10.2 x 14.2 x 3 cm จำนวนกระดาษ A7 50 แผ่น<br>
+                        </p>
+                        <div class="footer_data">
+                            <span class="price_pd">ราคา <b>290</b> บาท</span>
+                            <button onclick="openForm()"  class="order_button">สั่งซื้อ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <div class="more_pd">
+                    <a href="../../csmju_shop.html"><i class='bx bx-home-alt bx-lg'></i></a>
+                    <img src="../../img_form/notebook/7v.jpg">
+                    <img src="../../img_form/notebook/do.jpg">
+                    <img src="../../img_form/notebook/l5.jpg">
+                    <img src="../../img_form/notebook/mz.jpg">
+                    <img src="../../img_form/notebook/qu.jpg">
+                    <img src="../../img_form/notebook/uw.jpg">
+                    <img src="../../img_form/notebook/vl.jpg">
+                    <img src="../../img_form/notebook/xh.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popupForm" class="background_form" >
+        <div  class="form-popup">
+            <form class="form-container">
+                <h2>ใบสั่งซื้อสินค้าจาก csmju shop</h2>
+                <h3>สินค้าที่เลือก</h3>
+                <div class="box_img_pd">
+                    <img src="../../img_form/notebook/in.jpg">
+                   
+                    <p class="data_img">สมุดโน๊ต สมุดบันทึก ไดอารี่ สมุดเขียน A7 มีเส้น ลายแมวน่ารัก ปกหนัง PU พกพาง่าย จำนวนกระดาษ A7 50 แผ่น<br><b>สี:</b> เขียวมิ้นต์,ชมพู<br></p>
+                </div>
+                <!--สี-->
+                <label for="color-option"><b>เลือกสี</b></label>
+                <div id="colors-option">
+                    <input type="radio" name="color" id="mint-green" class="color-option" required>
+                    <label for="mint-green" class="color-label color-1"></label>
+
+                    <input type="radio" name="color" id="pink" class="color-option">
+                    <label for="pink" class="color-label color-2"></label>
+
+
+                </div>
+
+                <label for="color-option"><b>เลือกไซส์</b></label>
+                <div id="size-option" class="size_div">
+
+                    <input type="radio" name="size" id="Oversized" class="sized-option" checked>
+                    <label for="Oversized" class="size-label size-Oversized" required>One size 10.2 x 14.2 x 3 cm</label>
+
+                </div>
+
+                <label for="quantity"><b>จำนวน</b></label>
+                <input type="number" placeholder="กรอกจำนวนสินค้า" name="quantity" id="quantity" min="1" class="quantity_pd_order" required>
+                
+                <!--...-->
+                <label for="email"><b>อีเมล</b></label>
+                <input type="email" placeholder="ป้อนอีเมล" name="email" required>
+
+                <label for="name"><b>ชื่อ นามสกุล</b></label>
+                <input type="text" placeholder="ป้อนชื่อ นามสกุล" name="name" required>
+
+                <label for="number"><b>เบอร์โทรศัพท์</b></label>
+                <input type="tel" placeholder="ป้อนเบอร์โทร" name="number" required>
+
+                <label for="address"><b>ที่อยู่</b></label>
+                <input type="text" placeholder="ป้อนที่อยู่ เลขที่บ้าน หมู่ ตำบล อำเภอ จังหวัด รหัสไปรษณีย์" name="address" required>
+
+                <label for="shipping"><b>การจัดส่ง</b></label>
+                <div class="shipping" id="shipping">
+                    <input type="radio" name="shipping" id="delivery" class="shipping-option">
+                    <label for="delivery" class="delivery-label">จัดส่งบริการขนส่ง</label>
+
+                    <input type="radio" name="shipping" id="Pick-up-yourself" class="shipping-option">
+                    <label for="Pick-up-yourself" class="delivery-label">รับเอง</label>
+                </div>
+
+                <label for="payment-channels"><b>ช่องทางชำระเงิน</b></label>
+                <div class="payment-channels" id="payment-channels">
+
+                    <input type="radio" name="payment" id="Cash-on-delivery" class="payment-option">
+                    <label for="Cash-on-delivery" class="pm-ch-label">ชำระปรายทาง</label>
+
+                    <input type="radio" name="payment" id="Mobile Banking" class="payment-option">
+                    <label for="Mobile Banking" class="pm-ch-label">Mobile Banking</label>
+
+                    <input type="radio" name="payment" id="pay-cash" class="payment-option"><label for="pay-cash" class="pm-ch-label">ชำระเงินสด(สำหรับรับเอง)</label>
+                </div>
+
+                <label for="add_file"><b>แนบไฟล์</b> slips ใบชำระเงิน(สำหรับ Mobile Banking)</label>
+                <input type="file" id="add_file" class="add_file">
+                <div class="botton-form">
+                    <button type="submit">บันทึก</button>
+                    <button type="button" onclick="closeForm()" class="botton-cancel">ยกเลิก</button>
+                </div>
+                    
+            </form>
+        </div>
+    </div>
+</body>
+</html>  
