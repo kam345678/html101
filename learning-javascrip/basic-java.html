@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Hello world</h1>
+    </div>
+</body>
+<script>
+//     console.log("Hello, world");
+//     let name = "kam";
+//     let age = 21;
+//     let isStudent = true;
+
+//     const major = "Computer Science";
+//     const start =  0;
+//     const end = 100;
+
+//     //ข้อ1
+
+//     const birthDate = 2004;
+//     const currentYear = 2025;
+
+//     const ageInYears = currentYear - birthDate;
+//     console.log(`คุณอายุ: ${ageInYears}ปี`);
+
+//     //ข้อ2
+//     const student ={
+//         name: "Kam",
+//         score: 60,
+//         ispass: true,
+       
+//     };
+
+//     //ข้อ3
+
+//     console.log(student);
+
+//    if(student.score >= 50){
+//        student
+//        console.log("ผ่าน");
+//    } else {
+//        student.ispass = false;
+//        console.log("ไม่ผ่าน");
+//    }
+
+//    const numbers = [1, 2, 3, 4, 5];
+//    console.log(numbers)[2];
+//    for (let i = 0; i < numbers.length; i++) {
+//        console.log(numbers[2]);
+//    }
+
+//     for (let i = 0; i <= 20; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i);
+//     }
+
+
+// }   
+//     //ข้อ4
+//     let weather = "cold"; 
+
+//     switch (weather) {
+//         case "hot":
+//             console.log("สภาพอากาศตอนนี้ คือ ร้อน");
+//             break;
+//         case "cold":
+//             console.log("สภาพอากาศตอนนี้ คือ หนาว");
+//             break;
+//         case "rainy":
+//             console.log("สภาพอากาศตอนนี้ คือ ฝนตก");
+//             break;
+//     }
+
+//     //ข้อ5
+//     let number = [1,2,3,4,5,6,7,8,9,10];
+//     let sum = 0;
+//     for (let i = 0; i < number.length; i++) {
+//         sum += number[i];
+//     }
+//     console.log(`ผลรวมของตัวเลขในอาเรย์คือ: ${sum}`);
+
+    //function
+
+    // ข้อ1  
+     function calculateArea(width, height) {
+     return width * height;
+     }
+
+     let area = calculateArea(5, 10);
+     console.log("พื้นที่สี่เหลี่ยมคือ: " + area);
+
+    // ข้อ2
+    let product = ['apple', 'banana', 'orange', 'grape', 'kiwi'];
+
+    console.log(`เพิ่ม: ${product.push('mango')}`);
+    console.log(product);
+
+    console.log(`ลบ: ${product.pop('mango')}`);
+    console.log(product);
+
+     // ข้อ3
+   
+    let names = ['Alice', 'Jonathan', 'Mia', 'Christopher', 'David'];
+
+    let longNames = names.filter(function(name) {
+        return name.length > 5;
+    });
+
+    console.log("ชื่อทั้งหมด:", names);
+    console.log("ชื่อที่ยาวกว่า 5 ตัวอักษร:", longNames);
+        
+    // ข้อ4
+    
+    let prices = [100, 250, 300, 450, 500, 120, 75, 800, 150, 200];
+    let discountedPrices = prices.map(price => price * 0.9);
+
+    console.log("ราคาสินค้าก่อนส่วนลด:", prices);
+    console.log("ราคาสินค้าหลังหักส่วนลด 10%:", discountedPrices);
+
+    // ข้อ5
+    function getAverageScore(scores) {
+    let total = scores.reduce((sum, score) => sum + score, 0);
+    return total / scores.length;
+    }
+    
+    let studentScores = [80, 75, 90, 60, 85, 95, 70, 88, 92, 77];
+    let average = getAverageScore(studentScores);
+
+    console.log("คะแนนเฉลี่ยคือ: " + average);
+
+</script>
+</html>

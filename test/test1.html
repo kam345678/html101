@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ดึงรูปภาพจาก API</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        li {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body onload="fetchImage()">
+
+    <h1>แสดงรูปภาพจาก JSONPlaceholder</h1>
+    <ul id="gallery-list">
+        <li>กำลังโหลดรูปภาพ...</li>
+    </ul>
+
+    <script>
+        async function fetchImage() { 
+            const galleryList = document.getElementById('gallery-list'); 
+            galleryList.innerHTML = '<li>กำลังโหลดรูปภาพ...</li>'; 
+
+            try { 
+                // ดึงข้อมูลรูปภาพจาก API
+                const response = await axios.get('https://jsonplaceholder.typicode.com/photos'); 
+                const images = response.data.slice(0, 5); // ดึงแค่ 5 รูปภาพแรก 
+
+                // ล้างรายการเก่า
+                galleryList.innerHTML = '';
+
+                // แสดงรูปภาพ
+                images.forEach(image => { 
+                    const listItem = document.createElement('li'); 
+                    const img = document.createElement('img'); 
+                    img.src = image.thumbnailUrl; 
+                    img.alt = image.title; 
+                    listItem.appendChild(img); 
+                    galleryList.appendChild(listItem); 
+                }); 
+
+            } catch (error) { 
+                console.error('เกิดข้อผิดพลาดในการดึงรูปภาพ:', error.message); 
+                galleryList.innerHTML = '<li>เกิดข้อผิดพลาดในการดึงรูปภาพ</li>'; 
+            } 
+        }
+    </script>
+
+</body>
+</html>

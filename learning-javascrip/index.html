@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="switch.css">
+</head>
+<body>
+    <div>
+        <h1>hello, world</h1>
+    </div>
+    <div id="products-container">
+        <h2>Products</h2>
+    </div>
+    <img id="main-image" src="https://via.placeholder.com/300" alt="Main Image">
+    <div id="gallery"></div>
+
+    <div id=
+    "user-profile" style="color: green;">ยินดีต้อนรับ, ผู้ใช้ของเรา!</div>
+    <div id="guest-message" style="color: red;">กรุณาเข้าสู่ระบบเพื่อใช้งานฟีเจอร์ทั้งหมด</div>
+
+    <label class="switch">
+        <input type="checkbox" id="login-toggle">
+        <span class="slider"></span>
+    </label>
+    <p>isLoggedIn = <span id="status-text"></span></p>
+
+</body>
+<script>
+    // document.write("<p>This is a paragraph written using JavaScript.</p>");
+    
+    //ข้อ1
+    const products = [
+        {name:"apple", price: 10, stock: 5},
+        {name:"banana", price: 5, stock: 10},
+        {name:"orange", price: 8, stock: 0},
+        {name:"grape", price: 15, stock: 3},
+        {name:"kiwi", price: 12, stock: 0}
+    ];
+
+    const productsContainer = document.getElementById("products-container");
+    products.forEach(product => {
+        const p = document.createElement("p");
+        if (product.stock === 0) {
+            p.textContent = `${product.name} - สินค้าหมด`;
+            p.style.color = "red";
+        } else {
+            p.textContent = `${product.name} - ราคา: ${product.price} บาท (คงเหลือ: ${product.stock})`;
+        }
+        productsContainer.appendChild(p);
+    });
+
+    //ข้อ2
+    const imageUrls = [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPSW4tk4FD7iFQ808y778A8X3kT3S4wO5iUpyQHWADf7heg2yv7NF4-wNQYZnyB6tOINg&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1LCOmWhOuqdjfixdRSxQctOFP29c9kzztQ96ipimIixdjHyKX-PKho9zlYsROVse0pu8&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRokNBzbskIQa4wVogrUTdz6VK2eypDYlpuepP4aITrDSntuxGTo3BdGp-s_D6wW0xVrVQ&usqp=CAU"
+        ];
+
+        
+        const gallery = document.getElementById("gallery");
+        const mainImage = document.getElementById("main-image");
+
+       
+        imageUrls.forEach(url => {
+            const img = document.createElement("img");
+            img.src = url;
+            img.style.width = "50px";
+            img.style.height = "50px";
+            img.style.cursor = "pointer";
+           
+            img.addEventListener("click", () => {
+                mainImage.src = url.replace("100", "300"); 
+            });
+
+            gallery.appendChild(img);
+        });
+
+    //ข้อ3
+    let isLoggedIn = true;
+
+    const loginToggle = document.getElementById("login-toggle");
+    const statusText = document.getElementById("status-text");
+
+    const userProfile = document.getElementById("user-profile");
+    const guestMessage = document.getElementById("guest-message");
+
+    if (isLoggedIn) {
+            userProfile.style.display = "block";
+            guestMessage.style.display = "none";
+        } else {
+            userProfile.style.display = "none";
+            guestMessage.style.display = "block";
+        }
+
+         function updateDisplay() {
+            if (isLoggedIn) {
+                userProfile.style.display = "block";
+                guestMessage.style.display = "none";
+                statusText.textContent = "ture";
+            } else {
+                userProfile.style.display = "none";
+                guestMessage.style.display = "block";
+                statusText.textContent = "false";
+            }
+        }
+        updateDisplay();
+        loginToggle.addEventListener("change", () => {
+            isLoggedIn = loginToggle.checked;
+            updateDisplay();
+        });
+
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Even-booking.css">
+    <script src="java/Even-booking.js" defer></script>
+</head>
+<body>
+    <div class="navbar" style="display: flex;">
+        <input type="radio" name="page" id="eventBooking" checked>
+        <label for="eventBooking">Event Booking</label>
+
+        <input type="radio" name="page" id="healthSurvey">
+        <label for="healthSurvey">Health Survey</label>
+
+        <input type="radio" name="page" id="mjt16">
+        <label for="mjt16">มจท16</label>
+    </div>
+
+    <form id="eventBookingForm">
+        <h2>form จองตั๋วกิจกรรม (Event booking)</h2>
+
+        <label for="name" style="margin-top: 20px;">ชื่อ-นามสกุล:</label>
+        <input type="text" id="name" name="name" value="ก่ำ ลุคำ">
+        <span id="errorName" class="errorms"></span>
+
+        <label for="Phone">เบอร์โทรศัพท์</label>
+        <input type="tel" id="Phone" name="Phone"  value="0944752210" required placeholder="กรุณากรอกเบอร์โทรศัพท์ 10 หลัก">
+        <span id="errorPhone" class="errorms"></span>
+
+        <label for="ticket_type">ประเภทตั๋ว</label>
+        <select name="ticket_type" id="ticket_type" required>
+            <option value="ปกติ" selected>ปกติ</option>
+            <option value="vip">VIP</option>
+            <option value="Premium">Premium</option>
+        </select>
+
+        <label for="quantity" style="margin-top:15px;">จำนวนตั๋ว</label>
+        <input type="number" id="quantity" name="quantity" value="2">
+        <span id="errorQuantity" class="errorms"></span>
+        <div>
+            <button type="submit">จองตั๋ว</button>
+            <button type="reset" style="background-color: red;">ยกเลิก</button>
+        </div>
+    </form>
+    <div id="confirmModal" class="confirmModal">
+        <div class="modal-container">
+            <h3>สำเร็จ</h3>
+            <p>ประเภทตั๋ว: <span id="modalTicket"></span></p>
+            <p>จำนวนตั๋ว: <span id="modalQuantity"></span></p>
+            <button id="closeModal" style="width: 50px; margin-top: 10px; background-color: green;">ปิด</button>
+        </div>
+    </div>
+</body>
+</html>
