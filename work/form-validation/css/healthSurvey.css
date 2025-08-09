@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c7e8f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* modal code */
+.codeSnapshot {
+    display:none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+.modalCode{
+    padding: 10px;
+    display: flex;
+    width: 100%; 
+    height: 80%;
+    gap: 10px; 
+    justify-content: center;
+}
+
+.imgCode{
+    overflow: auto;
+}
+.modalCode img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;  
+    display: flex;
+}
+
+.imgCode>h1{
+    position:fixed;
+    top: 10px;
+}
+
+.showCodeBtn {
+  margin-bottom: 15px;
+}
+.showCodeBtn:hover {
+  background-color: #0056b3;
+}
+
+
+.button-form{
+    display: flex;
+    justify-content:start;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.submitBtn:hover {
+    background-color: #116bd2;
+}
+.cancleBtn{
+    background-color: #dc3545;
+}
+.cancleBtn:hover {
+    background-color: #c50808;
+}  
+
+
+/*----------- css form -----------*/
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+label {
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: 14px;
+    color: #333;
+}
+
+input{
+    margin-bottom:3px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+span{
+    color: red;
+    font-size: 13px;
+}

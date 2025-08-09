@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Mjt16.css">
+    <script src="java/Mjt16.js" defer></script>
+</head>
+<body>
+     <div style="display: flex; flex-direction: column; position:fixed;
+        top:20px; left: 20px; gap: 20px;">
+       <a href="Even-booking.html" style="text-decoration: none;">Even-booking</a>
+       <a href="healthSurvey.html"style="text-decoration: none;">healthSurvey</a>
+       <a href="Mjt16.html" style="text-decoration: none;">มจท.16</a>
+    </div>
+     <div class="container">
+        <div style=" background-color: rgb(255, 250, 235);">
+            <div class="navForm">
+                <button class="studentBtn" id="studentBtn">นักศึกษา</button>
+                <button class="professorBtn" id="professorBtn">อาจารย์และเจ้าหน้าที่</button>
+                <button class="showCodeBtn"id="showCodeBtn">Show Code</button>
+            </div>
+        </div>
+        <div class="formContainer">
+            <form id="Mjt16" >
+                <div class="inputContain">
+                    <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/250px-MJU_LOGO.svg.png" width="100px">
+                    <div style="margin-left: 20px;">
+                        <h1>มจท16 </h1>
+                        <h3>คำร้องขอโอนย้ายสาขาวิชาต่างคณะ</h3>
+                        <p>สำหรับหลักสูตร 4 ปี และ หลักสูตร 4 ปีเทียบเรียน(2ปี)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="inputContain">
+                    <div class="boxInput">
+                        <label for="name">ชื่อ-นามสกุล</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="boxInput">
+                        <label for="codeStudent">รหัสนักศึกษา</label>
+                        <input type="text" id="codeStudent" name="codeStudent">
+                    </div> 
+                </div>
+                
+                <div class="inputContain">
+                    <div style="display: flex; flex-direction: column; width:26%; margin-right: 5px;">
+                        <label for="phone">โทรศัพท์มือถือ</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div>
+                        <label for="selectCourse">หลักสูตร</label>
+                        <div id="selectCoure" class="selectCourse">
+                            <input type="radio" id="Four-five" name="course"><p>4-5ปี</p>
+                            <input type="radio" id="two" name="course"><p>4 ปีเทียบเข้าเรียน(2ปี)</p>
+                            <input type="radio" id="normalSection" name="sector"><p>ภาคปกติ</p>
+                            <input type="radio" id="supportingSection" name="sector"><p>ภาคสมทบ</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="inputContain">
+                    <div class="boxInput">
+                        <label for="newFuculty">สาขาวิชา</label>
+                        <input type="text" id="major" name="major">
+                    </div>
+                    <div class="boxInput" >
+                        <label for="newFuculty">คณะ</label>
+                        <input type="text" id="Fuculty" name="Fuculty">
+                    </div>
+                </div>
+                <hr>
+                <div class="inputContain">
+                    <div class="boxInput">
+                        <label for="newFuculty">มีความประสงค์จะขอย้ายไปสาขาวิชา</label>
+                        <input type="text" id="newMajor" name="newMajor">
+                    </div>
+                    <div class="boxInput" >
+                        <label for="newFuculty">คณะ</label>
+                        <input type="text" id="newFuculty" name="newFuculty">
+                    </div>
+                </div>
+            
+                
+                <div class="boxInput">
+                    <label for="reason">เหตุผลในการขอย้าย</label>
+                    <textarea rows="5"></textarea>
+                </div>
+                <hr>
+
+                <div class="information"><p>ทั้งนี้ข้าพเจ้ามีคุณสมบัติครบถ้วนในการขอย้ายสาขาวิชาดังนี้ คือ</p>
+                <p><b>หลักสูตร4ปีเทียบเข้าเรียน(2ปี)</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ได้ศึกษาตามแผนการศึกษาในสาขาวิชาเดิมมาแล้วไม่น้อยกว่า<b> 1 ภาคการศึกษาปกติ</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-มีหน่วยกิตสะสมไม่น้อยกว่า <strong>18</strong> หน่วยกิตและมีแต้มระดับคะแนนเฉลี่ยสะสม<b>ไม่น้อยกว่า 2.0</b><br>
+                </p>
+                <p><b>หลักสูตร4ปีเทียบเข้าเรียน(2ปี)</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ได้ศึกษาตามแผนการศึกษาในสาขาวิชาเดิมมาแล้วไม่น้อยกว่า<b> 2 ภาคการศึกษาปกติ</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-มีหน่วยกิตสะสมไม่น้อยกว่า <b>30</b> หน่วยกิตและมีแต้มระดับคะแนนเฉลี่ยสะสม<b>ไม่น้อยกว่า 2.0</b><br>
+                </p></div>
+                <hr>
+                <div class="boxInput">
+                    <label for="dateMove">ยื่นคำร้องโอนย้ายสาขาภายในคณะก่อนวันที่</label>
+                    <input type="date" id="dateMove" name="dateMove">
+                </div>
+                <div class="boxInput">
+                    <label for="attachFiles">แนบไฟล์ใบรายงานผลศึกษา</label>
+                    <input type="file" id="attachFiles" name="attachFiles">
+                </div>
+                <div class="inputContain">
+                    <div class="boxInput">
+                        <label for="signatureCanvas">ลายเซ็น</label>
+                        <canvas id="signatureCanvas" width="300" height="150" style="border:1px solid #000; width: 300px;border-radius: 5px;"></canvas>
+                        <button type="button" id="clearBtn" class="clearSignatureBtn" style="margin-top: 4%; width: 70px;">reset</button>
+                        <input type="hidden" name="signature" id="signatureInput">
+                    </div>  
+                </div>
+                <div class="footerForm" style="border-radius: 10px;">
+                    <div class="button-form">
+                        <button type="submit" class="submitBtn">บันทึก</button>
+                        <button type="reset"  class="cancleBtn" >ยกเลิก</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- /* -------formProfesorAndStaff--------- */ -->
+            <form id="formProfesorAndStaff" style="display:none;">
+                <div  class="inputContain">
+                    <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/250px-MJU_LOGO.svg.png" width="100px">
+                    <div style="margin-left: 20px;">
+                        <h1>มจท16</h1>
+                        <h3>คำร้องขออนุมัติโอนย้ายสาขาวิชาของนักศึกษา</h3>
+                        <p>สำหรับอาจารย์และเจ้าหน้าที่</p> 
+                    </div>
+                </div>
+                <select id="option-list">
+                    <option value="default" selected>----กรุณาเลือกรายการ-----</option>
+                    <option value="advisor">อาจารย์ที่ปรึกษา</option>
+                    <option value="NewHead-of-program-master">ประธานกรรมการบริหารหลักสูตรของสาขาที่จะรับโอนย้าย</option>
+                    <option value="OldHead-of-program-master">ประธานกรรมการบริหารหลักสูตรของสาขาเดิม</option>
+                    <option value="newDean">คณะบดีที่จะรับโอนย้าย</option>
+                    <option value="oldDean">คณะบดีของคณะเดิม</option>
+                    <option value="financer">นักวิชาการเงินและบัญชี</option>
+                    <option value="director-of-office">ผู้อำนวยการสำนักบริหารและพัฒนาวิชาการ</option>
+                    <option value="head-of-registration">หัวหน้ากลุ่มภาระกิจทะเบียนเรียนประมวลผล</option>
+                    <option value="academics-of-education">ตำแหน่งนักวิชาการศึกษา</option>
+                </select>
+
+                <!-- อาจารย์ที่ปรึกษา -->
+                <div id="advisor" class="boxResponse" >
+                    <div class="boxInput">
+                        <label for="name">ชื่อ-นามสกุล:</label>
+                        <input type="text" id="name" name="name">
+                        <span id="errorName" class="errorms"></span>
+                    </div>
+                    <div class="boxComment">
+                        <h4>ความเห็นชอบของสาขาวิชาเดิม</h4>
+                        <p class="p2">ความเห็นอาจารย์ที่ปรึกษา</p>
+                        <textarea class="textarea2" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <!-- ประธานกรรมการบริหารหลักสูตรของสาขาที่จะรับโอนย้าย -->
+                <div id="NewHead-of-program-master" class="boxResponse">
+                    <div class="boxInput">
+                        <label for="name">ชื่อ-นามสกุล:</label>
+                        <input type="text" id="name" name="name">
+                        <span id="errorName" class="errorms"></span>
+                    </div>
+                    <div class="boxComment" >
+                        <h4>ความเห็นชอบของสาขาวิชาที่จะรับโอนย้าย</h4>
+                        <p class="p2">ความเห็นประธานกรรมการบริหารหลักสูตร</p>
+                        <textarea class="textarea2" rows="5"></textarea>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <p>ประธานกรรมการบริหารหลักสูตร:</p><input type="text" style="width: 50%;">
+                    </div>
+                </div>
+
+                <!-- ประธานกรรมการบริหารหลักสูตรของสาขาเดิม -->
+                <div id="OldHead-of-program-master" class="boxResponse" >
+                    <div class="boxInput">
+                        <label for="name">ชื่อ-นามสกุล:</label>
+                        <input type="text" id="name" name="name">
+                        <span id="errorName" class="errorms"></span>
+                    </div>
+                    <div class="boxComment" >
+                        <h4>ความเห็นชอบของสาขาวิชาเดิม</h4>
+                        <p class="p2">ความเห็นประธานกรรมการบริหารหลักสูตร</p>
+                        <textarea class="textarea2" rows="5"></textarea>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <p>ประธานกรรมการบริหารหลักสูตร:</p><input type="text" style="width: 50%;">
+                    </div>
+                </div>
+
+                <!--คณะบดีที่จะรับโอนย้าย-->
+                <div id="newDean" class="boxResponse" >
+                    <div class="boxInput">
+                        <label for="name">ชื่อ-นามสกุล:</label>
+                        <input type="text" id="name" name="name">
+                        <span id="errorName" class="errorms"></span>
+                    </div>
+                    <div class="boxComment" >
+                        <h4>ความเห็นชอบของสาขาวิชาที่จะรับโอนย้าย</h4>
+                        <p class="p2">ความเห็นคณบดีคณะ</p>
+                        <textarea class="textarea2" rows="5"></textarea>
+                    </div>
+                    <div id="selectApproval" class="selectCourse">
+                        <input type="radio" id="tApproval" name="Approval"><p>อนุมัติ</p>
+                        <input type="radio" id="fApproval" name="Approval"><p>ไม่อนุมัติ</p>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <p>คณบดีคณะ:</p><input type="text" style="width: 50%;">
+                    </div>
+                </div>
+
+                <!--คณะบดีคณะเดิม -->
+                <div id="oldDean" class="boxResponse" >
+                    <div class="boxInput">
+                        <label for="name">ชื่อ-นามสกุล:</label>
+                        <input type="text" id="name" name="name">
+                        <span id="errorName" class="errorms"></span>
+                    </div>
+                    <div class="boxComment" >
+                        <h4>ความเห็นชอบของสาขาวิชาเดิม</h4>
+                        <p class="p2">ความเห็นคณบดีคณะ</p>
+                        <textarea class="textarea2" rows="5"></textarea>
+                    </div>
+                    <div id="selectAcceptation" class="selectCourse">
+                        <input type="radio" id="tAcceptation" name="Acceptation"><p>เห็นชอบ</p>
+                        <input type="radio" id="fAcceptation" name="Acceptation"><p>ไม่เห็นชอบ</p>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <p>คณบดีคณะ:</p><input type="text" style="width: 50%;">
+                    </div>
+                </div>
+
+                <!-- นักวิชาการเงินและบัญชี -->
+                <div id="financer" class="boxResponse" >
+                    <div class="boxInput">
+                        <label for="name">ชื่อ-นามสกุล:</label>
+                        <input type="text" id="name" name="name">
+                        <span id="errorName" class="errorms"></span>
+                    </div>
+                    <div class="boxComment" >
+                        <h4>งานเงินรายได้ กองคลังชั้น 1 สำนักงานอธิการบดี</h4>
+                        <p class="p2">ได้รับชำระเงินจำนวน <b>500</b> บาท เป็นที่เรียบร้อยแล้ว<br>และได้ออกใบเสร็จรับเงินเล่มที่  
+                        <input type="text" style="height: 20px; width: 100px;"> เลขที่ <input type="text" style="height: 20px; width: 120px;"></p>
+                    </div>
+                    <div style="display: flex;"><h4>นักวิชาการเงินและบัญชี</h4><p>(ผู้รับเงิน)</p></div>
+                </div>
+                
+                 <!-- ผู้อำนวยการสำนักบริหารและพัฒนาวิชาการ -->
+                <div id="director-of-office" class="boxResponse" >
+                    <div class="boxInput">
+                        <label for="name">ชื่อ-นามสกุล:</label>
+                        <input type="text" id="name" name="name">
+                        <span id="errorName" class="errorms"></span>
+                    </div>
+                    <div class="boxComment">
+                        <h4>ผู้อำนวยการสำนักบริหารและพัฒนาวิชาการ</h4>
+                        <p class="p2">ความเห็นผู้อำนวยการสำนักบริหารและพัฒนาวิชาการ</p>
+                        <textarea class="textarea2" rows="5"></textarea>
+                    </div>
+                </div>
+
+                 <!-- หัวหน้ากลุ่มภาระกิจทะเบียนเรียนประมวลผล -->
+                <div id="head-of-registration" class="boxResponse" >
+                    <div class="boxInput">
+                        <label for="name">ชื่อ-นามสกุล:</label>
+                        <input type="text" id="name" name="name">
+                        <span id="errorName" class="errorms"></span>
+                    </div>
+                    <div class="boxComment">
+                        <p class="p2">ความเห็นหัวหน้ากลุ่มภาระกิจทะเบียนเรียนประมวลผล</p>
+                        <textarea class="textarea2" rows="5"></textarea>
+                        <h4>หัวหน้ากลุ่มภาระกิจทะเบียนเรียนประมวลผล</h4>
+                    </div>
+                </div>
+                 <!-- ตำแหน่งนักวิชาการศึกษา -->
+                <div id="academics-of-education" class="boxResponse" >
+                    <div class="boxInput">
+                        <label for="name">ชื่อ-นามสกุล:</label>
+                        <input type="text" id="name" name="name">
+                        <span id="errorName" class="errorms"></span>
+                    </div>
+                    <div class="boxComment">
+                        <h4>สำหรับเจ้าหน้าที่ดำเนินการ</h4>
+                        <p class="p2">ดำเนินการย้ายสาขาวิชาเป็นที่เรียบร้อยแล้ว </p>
+                        <p><b>รหัสนักศึกษาใหม่คือ</b> <input type="text" style="height: 25px;"></p>
+                        <h4>ตำแหน่งนักวิชาการศึกษา</h4>
+                    </div>
+                </div>
+                <div id="signature2&button-form2" style="display: none; flex-direction: column; gap: 15px;">
+                    <div class="inputContain" id="signature2">
+                        <div class="boxInput">
+                            <label for="signatureCanvas2">ลายเซ็น</label>
+                            <canvas id="signatureCanvas2" class="signatureCanvas2"  width="300" height="150" ></canvas>
+                            <button type="button" id="clearBtn2" class="clearSignatureBtn" >reset</button>
+                            <input type="hidden" name="signature2" id="signatureInput2">
+                        </div>  
+                    </div> 
+                    <div class="footerForm" style="border-radius: 10px;">
+                        <div class="button-form">
+                            <button type="submit" class="submitBtn">บันทึก</button>
+                            <button type="reset"  class="cancleBtn" >ยกเลิก</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    
+    <!-- showcode -->
+    <div id="codeSnapshot" class="codeSnapshot">
+        <div class="modalCode">
+            <div class="imgCode">
+                <h1 style="color: sandybrown;">HTML</h1>
+                <a href=""></a>
+            </div>
+            <div class="imgCode javaImgCode" >
+            <h1 style="color: yellow;">Java Script</h1>
+                <a href=""></a>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 20px;" >
+            <button id="closeCodeBtn" class="closeCodeBtn">Close</button></div>
+        </div>
+</body>
+</html>

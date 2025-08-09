@@ -1,74 +1,76 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ดึงรูปภาพจาก API</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        li {
-            background: white;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-    </style>
-</head>
-<body onload="fetchImage()">
+<select id="modalSelect">
+    <option value="">----กรุณาเลือกรายการ-----</option>
+    <option value="advisorModal">อาจารย์ที่ปรึกษา</option>
+    <option value="newHeadModal">ประธานกรรมการบริหารหลักสูตรของสาขาที่จะรับโอนย้าย</option>
+    <option value="oldHeadModal">ประธานกรรมการบริหารหลักสูตรของสาขาเดิม</option>
+</select>
 
-    <h1>แสดงรูปภาพจาก JSONPlaceholder</h1>
-    <ul id="gallery-list">
-        <li>กำลังโหลดรูปภาพ...</li>
-    </ul>
+<!-- ตัวอย่าง Modal -->
+<div id="advisorModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>อาจารย์ที่ปรึกษา</h2>
+    <p>เนื้อหา modal อาจารย์ที่ปรึกษา</p>
+  </div>
+</div>
 
-    <script>
-        async function fetchImage() { 
-            const galleryList = document.getElementById('gallery-list'); 
-            galleryList.innerHTML = '<li>กำลังโหลดรูปภาพ...</li>'; 
+<div id="newHeadModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>ประธานกรรมการสาขาใหม่</h2>
+    <p>เนื้อหา modal สาขาใหม่</p>
+  </div>
+</div>
 
-            try { 
-                // ดึงข้อมูลรูปภาพจาก API
-                const response = await axios.get('https://jsonplaceholder.typicode.com/photos'); 
-                const images = response.data.slice(0, 5); // ดึงแค่ 5 รูปภาพแรก 
+<div id="oldHeadModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>ประธานกรรมการสาขาเดิม</h2>
+    <p>เนื้อหา modal สาขาเดิม</p>
+  </div>
+</div>
 
-                // ล้างรายการเก่า
-                galleryList.innerHTML = '';
+<style>
+.modal {
+    display: none; /* ซ่อน modal */
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: 10% auto;
+    width: 400px;
+    border-radius: 8px;
+}
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+</style>
 
-                // แสดงรูปภาพ
-                images.forEach(image => { 
-                    const listItem = document.createElement('li'); 
-                    const img = document.createElement('img'); 
-                    img.src = image.thumbnailUrl; 
-                    img.alt = image.title; 
-                    listItem.appendChild(img); 
-                    galleryList.appendChild(listItem); 
-                }); 
+<script>
+const select = document.getElementById('modalSelect');
+const modals = document.querySelectorAll('.modal');
 
-            } catch (error) { 
-                console.error('เกิดข้อผิดพลาดในการดึงรูปภาพ:', error.message); 
-                galleryList.innerHTML = '<li>เกิดข้อผิดพลาดในการดึงรูปภาพ</li>'; 
-            } 
-        }
-    </script>
+// ปิด modal เมื่อคลิกปุ่ม close
+document.querySelectorAll('.close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        modals.forEach(m => m.style.display = 'none');
+    });
+});
 
-</body>
-</html>
+select.addEventListener('change', function() {
+    // ปิด modal ทั้งหมดก่อน
+    modals.forEach(m => m.style.display = 'none');
+
+    const modalId = this.value;
+    if (modalId) {
+        document.getElementById(modalId).style.display = 'block';
+    }
+});
+</script>

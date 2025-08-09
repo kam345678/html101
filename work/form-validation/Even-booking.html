@@ -8,17 +8,13 @@
     <script src="java/Even-booking.js" defer></script>
 </head>
 <body>
-    <div class="navbar" style="display: flex;">
-        <input type="radio" name="page" id="eventBooking" checked>
-        <label for="eventBooking">Event Booking</label>
-
-        <input type="radio" name="page" id="healthSurvey">
-        <label for="healthSurvey">Health Survey</label>
-
-        <input type="radio" name="page" id="mjt16">
-        <label for="mjt16">มจท16</label>
+    <div style="display: flex; flex-direction: column; position:fixed;
+    top:20px; left: 20px; gap: 20px;">
+       <a href="Even-booking.html" style="text-decoration: none;">Even-booking</a>
+       <a href="healthSurvey.html"style="text-decoration: none;">healthSurvey</a>
+       <a href="Mjt16.html" style="text-decoration: none;">มจท.16</a>
     </div>
-
+    <div><button id="showCodeBtn" class="showCodeBtn" >Show Code</button></div>
     <form id="eventBookingForm">
         <h2>form จองตั๋วกิจกรรม (Event booking)</h2>
 
@@ -27,7 +23,7 @@
         <span id="errorName" class="errorms"></span>
 
         <label for="Phone">เบอร์โทรศัพท์</label>
-        <input type="tel" id="Phone" name="Phone"  value="0944752210" required placeholder="กรุณากรอกเบอร์โทรศัพท์ 10 หลัก">
+        <input type="tel" id="Phone" name="Phone"  value="0670410308" required placeholder="กรุณากรอกเบอร์โทรศัพท์ 10 หลัก">
         <span id="errorPhone" class="errorms"></span>
 
         <label for="ticket_type">ประเภทตั๋ว</label>
@@ -42,16 +38,37 @@
         <span id="errorQuantity" class="errorms"></span>
         <div>
             <button type="submit">จองตั๋ว</button>
-            <button type="reset" style="background-color: red;">ยกเลิก</button>
+            <button type="reset" class="cancle">ยกเลิก</button>
         </div>
     </form>
+    
     <div id="confirmModal" class="confirmModal">
         <div class="modal-container">
             <h3>สำเร็จ</h3>
             <p>ประเภทตั๋ว: <span id="modalTicket"></span></p>
             <p>จำนวนตั๋ว: <span id="modalQuantity"></span></p>
-            <button id="closeModal" style="width: 50px; margin-top: 10px; background-color: green;">ปิด</button>
+            <button id="closeModal" class="closeModal">ปิด</button>
         </div>
+    </div>
+
+
+    <!-- showcode -->
+    <div id="codeSnapshot" class="codeSnapshot">
+        <div class="modalCode">
+            <div class="imgCode">
+                <h1 style="color: sandybrown;">HTML</h1>
+                <img src="img/html/Even-booking-image.png">
+            </div>
+            <div class="imgCode javaImgCode" >
+            <h1 style="color: yellow;">Java Script</h1>
+                <img src="img/javaScipts/Even-booking-js.png">
+            </div>
+            <!-- <div class="imgCode">
+                <h2 style="color: rgb(0, 140, 255);">CSS</h2>
+                <img src="img/html/Even-booking-image.png">
+            </div> -->
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 20px;" ><button id="closeCodeBtn" class="closeCodeBtn">Close</button></div>
     </div>
 </body>
 </html>

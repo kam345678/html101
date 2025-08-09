@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/healthSurvey.css">
+    <script src="java/healthSurvey.js" defer></script>
+</head>
+<body>
+     <div style="display: flex; flex-direction: column; position:fixed;
+        top:20px; left: 20px; gap: 20px;">
+       <a href="Even-booking.html" style="text-decoration: none;">Even-booking</a>
+       <a href="healthSurvey.html"style="text-decoration: none;">healthSurvey</a>
+       <a href="Mjt16.html" style="text-decoration: none;">มจท.16</a>
+    </div>
+    <div><button id="showCodeBtn" class="showCodeBtn" >Show Code</button></div>
+    <form id="healthSurveyForm">
+        <h1>Health Survey Form</h1>
+
+        <label for="age">อายุ</label>
+        <input type="number" id="age" name="age">
+        <span id="errorAge" class="errorms"></span>
+
+        <label for="gender-options">เพศ</label>
+        <div id="gender-options" class="gender-options">
+            <input type="radio" id="male" name="gender">
+            <label for="male">ชาย</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">หญิง</label>
+            <span id="errorGender" class="errorms"></span>
+
+        </div>
+        <label for="weigth">น้ำหนัก (กิโลกรัม)</label>
+        <input type="number" id="weight" name="weight">
+        <span id="errorWeight" class="errorms"></span>
+
+        <label for="height">ส่วนสูง (เซนติเมตร)</label>
+        <input type="number" id="height" name="height" >
+        <span id="errorHeight" class="errorms"></span>
+
+        <label for="congenital-disease">โรคประจำตัว</label>
+        <div class="congenital-disease" id="congenital-disease">
+            <input type="checkbox" id="yes" name="disease" value="yes">
+            <label for="yes">มี</label>
+            <input type="checkbox" id="no" name="disease" value="yes" >
+            <label for="no">ไม่มี</label>
+        </div>
+        <span id="errorConnitalDisesase" class="errorms"></span>
+        
+        <div id="disease-details-container" style="display: none; flex-direction: column;">
+            <label for="disease-details">ถ้ามีโรคประจำตัว โปรดระบุ</label>
+            <textarea id="disease-details" name="disease-details" rows="4"></textarea>
+            <span id="errorDisease" class="errorms"></span>
+        </div>
+
+        <div class="button-form">
+            <button type="submit" class="submitBtn">บันทึก</button>
+            <button type="reset"  class="cancleBtn">ยกเลิก</button>
+        </div>
+    </form>
+   
+
+
+    <!-- showcode -->
+    <div id="codeSnapshot" class="codeSnapshot">
+        <div class="modalCode">
+            <div class="imgCode">
+                <h1 style="color: sandybrown;">HTML</h1>
+                <img src="img/html/healthSurvey.png">
+            </div>
+            <div class="imgCode javaImgCode" >
+            <h1 style="color: yellow;">Java Script</h1>
+                <img src="img/javaScipts/healthSurvey.png">
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 20px;" ><button 
+            id="closeCodeBtn" class="closeCodeBtn">Close</button></div>
+    </div>
+
+    <div id="BmiModalContainer" style="display: none; position: fixed; 
+    top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
+        <div style="background: white; padding: 20px; border-radius: 8px;
+        text-align: center; gap: 10px; box-shadow: 0 2px 10px rgb(5, 220, 5);">
+            <h2>ผลการคำนวณ BMI</h2>
+            <p id="bmiValue"></p>
+            <p id="bmiCategory"></p>
+            <button id="closeBmiModal" style="margin-top: 15px;">ปิด</button>
+        </div>
+    </div>
+</body>
+</html>
